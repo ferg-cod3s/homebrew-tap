@@ -5,15 +5,15 @@
 class Rune < Formula
   desc "Ancient wisdom for modern workflows - A developer-first CLI productivity platform"
   homepage "https://github.com/ferg-cod3s/rune"
-  version "0.1.0-alpha.7"
+  version "0.1.0-alpha.8"
   license "MIT"
 
   depends_on "git" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ferg-cod3s/rune/releases/download/v0.1.0-alpha.7/rune_Darwin_x86_64.tar.gz"
-      sha256 "b6270b43382269048da29214468c4b6f26b257cb8d3648b40f7aef557be3eaa8"
+      url "https://github.com/ferg-cod3s/rune/releases/download/v0.1.0-alpha.8/rune_Darwin_x86_64.tar.gz"
+      sha256 "a3ab686443b32b1750cdb7896012599548987ab8aba7db0710bf29d7a83a5dee"
 
       def install
         bin.install "rune"
@@ -28,8 +28,8 @@ class Rune < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ferg-cod3s/rune/releases/download/v0.1.0-alpha.7/rune_Darwin_arm64.tar.gz"
-      sha256 "d2fb13f33e469ff5d55faafd2793ddf1fae1e86228b141d5c07fcf43bdf5796f"
+      url "https://github.com/ferg-cod3s/rune/releases/download/v0.1.0-alpha.8/rune_Darwin_arm64.tar.gz"
+      sha256 "d2ae0048d413b8ae307d949a51881413a4f6517d44fe416578bb481f99215e73"
 
       def install
         bin.install "rune"
@@ -47,8 +47,8 @@ class Rune < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ferg-cod3s/rune/releases/download/v0.1.0-alpha.7/rune_Linux_x86_64.tar.gz"
-      sha256 "aff9b1c7c56044ea7c25d1d2694de8cf9d91aad18c0b4b1b4b46ea35bc049cb3"
+      url "https://github.com/ferg-cod3s/rune/releases/download/v0.1.0-alpha.8/rune_Linux_x86_64.tar.gz"
+      sha256 "c662ac28af2a36131b6e83b9ad19fa19f336dc07c3fb3ae0c8914124a801416c"
       def install
         bin.install "rune"
 
@@ -62,8 +62,8 @@ class Rune < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ferg-cod3s/rune/releases/download/v0.1.0-alpha.7/rune_Linux_arm64.tar.gz"
-      sha256 "da798dde02b271e917fb9bc8b72bf38915140bf6a4bf443bbf3adc59e6faebff"
+      url "https://github.com/ferg-cod3s/rune/releases/download/v0.1.0-alpha.8/rune_Linux_arm64.tar.gz"
+      sha256 "5959604c2bd6f3a0c30d4e919187e69a316cf37b884d081b5e3f992e001aabc6"
       def install
         bin.install "rune"
 
