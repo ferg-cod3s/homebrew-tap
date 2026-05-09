@@ -5,23 +5,23 @@
 class Solo < Formula
   desc "Local orchestration layer for coordinating multiple coding agents"
   homepage "https://github.com/v1truv1us/Solo"
-  version "0.1.1"
+  version "0.0.1-alpha"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.1/Solo_Darwin_x86_64.tar.gz"
-      sha256 "5122b9b37b2e326062eaae7604bba8b205beeddb12fa3245bbed44807b0eee84"
+      url "https://github.com/v1truv1us/Solo/releases/download/v0.0.1-alpha/Solo_Darwin_x86_64.tar.gz"
+      sha256 "24e1d4f8d91e9e535ebdf9085438f41a3edd149de65fb650c5fac9790e00ff13"
 
-      def install
+      define_method(:install) do
         bin.install "solo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.1/Solo_Darwin_arm64.tar.gz"
-      sha256 "68a1508f5cbd00855efeeba28447630523f94b5c1a1bae5a1f55e48438ca0acf"
+      url "https://github.com/v1truv1us/Solo/releases/download/v0.0.1-alpha/Solo_Darwin_arm64.tar.gz"
+      sha256 "aeb3c212409438454ab32418392faee209555c9a362498d6015f58da29574cf6"
 
-      def install
+      define_method(:install) do
         bin.install "solo"
       end
     end
@@ -29,16 +29,16 @@ class Solo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.1/Solo_Linux_x86_64.tar.gz"
-      sha256 "c30edd6141a40eeb9b760e174bd78a120017b1c5dccba1a17aec2f06df833f25"
-      def install
+      url "https://github.com/v1truv1us/Solo/releases/download/v0.0.1-alpha/Solo_Linux_x86_64.tar.gz"
+      sha256 "1ad10b693ad6fb4a56087ff76f1e529bc451cee62819423990a9eae697515ab4"
+      define_method(:install) do
         bin.install "solo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.1/Solo_Linux_arm64.tar.gz"
-      sha256 "e63f9496e7405b642b7351f0ac1b51c43729705ca43a389fc2292b54af8bf70f"
-      def install
+      url "https://github.com/v1truv1us/Solo/releases/download/v0.0.1-alpha/Solo_Linux_arm64.tar.gz"
+      sha256 "38f629baac4cc3dd302fd17d242c6bf5f68fbf7f15e465acc551eaee0e093000"
+      define_method(:install) do
         bin.install "solo"
       end
     end
