@@ -5,21 +5,21 @@
 class Solo < Formula
   desc "Local orchestration layer for coordinating multiple coding agents"
   homepage "https://github.com/v1truv1us/Solo"
-  version "0.0.1-alpha"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/v1truv1us/Solo/releases/download/v0.0.1-alpha/Solo_Darwin_x86_64.tar.gz"
-      sha256 "24e1d4f8d91e9e535ebdf9085438f41a3edd149de65fb650c5fac9790e00ff13"
+      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.2/Solo_Darwin_x86_64.tar.gz"
+      sha256 "44a914961be6b1ccc2f33217783aa4b31df85ac2e64191314779c1d3a7f4b66f"
 
       define_method(:install) do
         bin.install "solo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/v1truv1us/Solo/releases/download/v0.0.1-alpha/Solo_Darwin_arm64.tar.gz"
-      sha256 "aeb3c212409438454ab32418392faee209555c9a362498d6015f58da29574cf6"
+      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.2/Solo_Darwin_arm64.tar.gz"
+      sha256 "caaca81827b7f54ed9fbeed426f9659461cc3caa6bbb550f43c92b75903fd6b3"
 
       define_method(:install) do
         bin.install "solo"
@@ -29,15 +29,15 @@ class Solo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/v1truv1us/Solo/releases/download/v0.0.1-alpha/Solo_Linux_x86_64.tar.gz"
-      sha256 "1ad10b693ad6fb4a56087ff76f1e529bc451cee62819423990a9eae697515ab4"
+      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.2/Solo_Linux_x86_64.tar.gz"
+      sha256 "ff4370b9156d0d09baf4a0e7902b96d0d5d9591e4d55650be0364e01485317d8"
       define_method(:install) do
         bin.install "solo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/v1truv1us/Solo/releases/download/v0.0.1-alpha/Solo_Linux_arm64.tar.gz"
-      sha256 "38f629baac4cc3dd302fd17d242c6bf5f68fbf7f15e465acc551eaee0e093000"
+      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.2/Solo_Linux_arm64.tar.gz"
+      sha256 "fe44cc025e35dee177bb8c81610ae50d3e4e62a0684b698514ed20b840a5a749"
       define_method(:install) do
         bin.install "solo"
       end
