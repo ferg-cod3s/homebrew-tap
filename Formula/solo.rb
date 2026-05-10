@@ -5,21 +5,21 @@
 class Solo < Formula
   desc "Local orchestration layer for coordinating multiple coding agents"
   homepage "https://github.com/v1truv1us/Solo"
-  version "0.1.2"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.2/Solo_Darwin_x86_64.tar.gz"
-      sha256 "44a914961be6b1ccc2f33217783aa4b31df85ac2e64191314779c1d3a7f4b66f"
+      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.1/Solo_Darwin_x86_64.tar.gz"
+      sha256 "e476c0df832b34e500771519cbe1f6e198f68de8a7d20ea8ea7b8af9e57d73ec"
 
       define_method(:install) do
         bin.install "solo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.2/Solo_Darwin_arm64.tar.gz"
-      sha256 "caaca81827b7f54ed9fbeed426f9659461cc3caa6bbb550f43c92b75903fd6b3"
+      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.1/Solo_Darwin_arm64.tar.gz"
+      sha256 "dfb8d6025d493c028d7b3d589ff2a9c4231745a6d410e94351124a382e37d0f7"
 
       define_method(:install) do
         bin.install "solo"
@@ -29,15 +29,15 @@ class Solo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.2/Solo_Linux_x86_64.tar.gz"
-      sha256 "ff4370b9156d0d09baf4a0e7902b96d0d5d9591e4d55650be0364e01485317d8"
+      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.1/Solo_Linux_x86_64.tar.gz"
+      sha256 "ff3e155993427ab59152de3980d6c6eeb873fe7661adc8ac46604d2a977cccc2"
       define_method(:install) do
         bin.install "solo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.2/Solo_Linux_arm64.tar.gz"
-      sha256 "fe44cc025e35dee177bb8c81610ae50d3e4e62a0684b698514ed20b840a5a749"
+      url "https://github.com/v1truv1us/Solo/releases/download/v0.1.1/Solo_Linux_arm64.tar.gz"
+      sha256 "a12b24640eccb14ff2835999321ef2bc2781e8fa94e1c180b740dcbd6d107433"
       define_method(:install) do
         bin.install "solo"
       end
