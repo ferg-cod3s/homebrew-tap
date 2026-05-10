@@ -11,7 +11,7 @@ class Solo < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/v1truv1us/Solo/releases/download/v0.1.1/Solo_Darwin_x86_64.tar.gz"
-      sha256 "e476c0df832b34e500771519cbe1f6e198f68de8a7d20ea8ea7b8af9e57d73ec"
+      sha256 "f548c997eac7b54011018d49d50c4dad4e8f578d16dbf7709838730f6c865fd3"
 
       define_method(:install) do
         bin.install "solo"
@@ -19,7 +19,7 @@ class Solo < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/v1truv1us/Solo/releases/download/v0.1.1/Solo_Darwin_arm64.tar.gz"
-      sha256 "dfb8d6025d493c028d7b3d589ff2a9c4231745a6d410e94351124a382e37d0f7"
+      sha256 "f3f114464246b88febfe6e596cda5a011698882db9cbbe3ba3ce9315f45f7014"
 
       define_method(:install) do
         bin.install "solo"
@@ -30,14 +30,14 @@ class Solo < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/v1truv1us/Solo/releases/download/v0.1.1/Solo_Linux_x86_64.tar.gz"
-      sha256 "ff3e155993427ab59152de3980d6c6eeb873fe7661adc8ac46604d2a977cccc2"
+      sha256 "408da2314113b130eb38b370adb55c71b2f1505ed846ec413291f439e0315e57"
       define_method(:install) do
         bin.install "solo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/v1truv1us/Solo/releases/download/v0.1.1/Solo_Linux_arm64.tar.gz"
-      sha256 "a12b24640eccb14ff2835999321ef2bc2781e8fa94e1c180b740dcbd6d107433"
+      sha256 "f79f94c264e7058131295eeb68ec7559a917bbd8fb82a7e1d719ba7161e47574"
       define_method(:install) do
         bin.install "solo"
       end
